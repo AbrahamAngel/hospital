@@ -1,0 +1,50 @@
+{% extends 'core/base.html' %}
+{% block title %}Patient Dashboard - FCR{% endblock %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5">
+  <h2>Welcome, {{ user.first_name }} {{ user.last_name }}</h2>
+  <p>This is your <strong>Patient Dashboard</strong>.</p>
+
+  <div class="card mt-4">
+    <div class="card-header">Hospital Visits</div>
+    <div class="card-body">
+      <ul class="list-group">
+        <li class="list-group-item">
+          <strong>Date:</strong> 2024-12-12<br>
+          <strong>Doctor:</strong> Dr. John Smith<br>
+          <strong>Hospital:</strong> City Hospital<br>
+          <strong>Purpose:</strong> General Checkup<br>
+          <strong>Diagnosis:</strong> Healthy
+        </li>
+        <li class="list-group-item">
+          <strong>Date:</strong> 2024-10-05<br>
+          <strong>Doctor:</strong> Dr. Anita Rao<br>
+          <strong>Hospital:</strong> Metro Medical Center<br>
+          <strong>Purpose:</strong> Fever & Headache<br>
+          <strong>Diagnosis:</strong> Viral Infection
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card mt-4">
+    <div class="card-header">Recent Medical Reports</div>
+    <div class="card-body">
+      <ul class="list-group">
+        <li class="list-group-item">
+          <strong>Date:</strong> 2024-12-13<br>
+          <strong>Summary:</strong> Blood test indicates normal values.<br>
+          <a href="{% static 'reports/report1.pdf' %}" target="_blank">View Report</a>
+        </li>
+        <li class="list-group-item">
+          <strong>Date:</strong> 2024-10-06<br>
+          <strong>Summary:</strong> Scan shows mild sinus inflammation.<br>
+          <a href="{% static 'reports/report2.pdf' %}" target="_blank">View Report</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+{% endblock %}

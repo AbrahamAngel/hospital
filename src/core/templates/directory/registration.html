@@ -1,0 +1,130 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Sign Up - FCR</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="shortcut icon" href="{% static 'assets/images/favicon.ico' %}">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+</head>
+
+<body class="sticky-header">
+<section class="bg-login">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 col-md-12">
+                <div class="wrapper-page">
+                    <div class="account-box mt-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card-title text-center">
+<!--                                     <img src="{% static 'assets/images/logo_sm_2.png' %}" alt="logo"> -->
+                                    <h5 class="mt-3"><b>Create Your Account</b></h5>
+                                </div>
+
+                                {% if messages %}
+                                    {% for message in messages %}
+                                        <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+                                    {% endfor %}
+                                {% endif %}
+
+                                <form method="POST" enctype="multipart/form-data">
+                                    {% csrf_token %}
+
+                                    <div class="form-group">
+                                        {{ form.username.label_tag }}
+                                        {{ form.username }}
+                                        {{ form.username.errors }}
+                                    </div>
+
+                                    <div class="form-group">
+                                        {{ form.firstname.label_tag }}
+                                        {{ form.firstname }}
+                                        {{ form.firstname.errors }}
+                                    </div>
+
+                                    <div class="form-group">
+                                        {{ form.lastname.label_tag }}
+                                        {{ form.lastname }}
+                                        {{ form.lastname.errors }}
+                                    </div>
+
+                                    <div class="form-group">
+                                        {{ form.email.label_tag }}
+                                        {{ form.email }}
+                                        {{ form.email.errors }}
+                                    </div>
+
+                                    <div class="form-group">
+                                        {{ form.user_type.label_tag }}
+                                        {{ form.user_type }}
+                                        {{ form.user_type.errors }}
+                                    </div>
+
+                                    <div class="form-group">
+                                        {{ form.profile_picture.label_tag }}
+                                        {{ form.profile_picture }}
+                                        {{ form.profile_picture.errors }}
+                                    </div>
+
+                                    <div class="form-group">
+                                        {{ form.address_line1.label_tag }}
+                                        {{ form.address_line1 }}
+                                        {{ form.address_line1.errors }}
+                                    </div>
+
+                                    <div class="form-group">
+                                        {{ form.city.label_tag }}
+                                        {{ form.city }}
+                                        {{ form.city.errors }}
+                                    </div>
+
+                                    <div class="form-group">
+                                        {{ form.state.label_tag }}
+                                        {{ form.state }}
+                                        {{ form.state.errors }}
+                                    </div>
+
+                                    <div class="form-group">
+                                        {{ form.pincode.label_tag }}
+                                        {{ form.pincode }}
+                                        {{ form.pincode.errors }}
+                                    </div>
+
+                                    <div class="form-group">
+                                        {{ form.password1.label_tag }}
+                                        {{ form.password1 }}
+                                        {{ form.password1.errors }}
+                                    </div>
+
+                                    <div class="form-group">
+                                        {{ form.password2.label_tag }}
+                                        {{ form.password2 }}
+                                        {{ form.password2.errors }}
+                                    </div>
+
+                                    <div class="form-group text-center">
+                                        <button type="submit" class="btn btn-primary btn-block">Register</button>
+                                    </div>
+
+                                    <div class="text-center mt-2">
+                                        Already have an account? <a href="{% url 'login' %}">Log In</a>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+
+<script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+</body>
+</html>

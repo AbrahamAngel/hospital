@@ -1,0 +1,108 @@
+{% extends 'core/base.html' %}
+{% block title %}Doctor's Dashboard - FCR{% endblock %}
+{% block content %}
+
+
+                <div class="container-fluid">
+                    <div class="page-head">
+                        <h4 class="mt-2 mb-2">Doctor's Dashboard</h4>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 col-sm-12">
+                            <div class="row">
+                                <div class="col-lg-3 col-sm-3">
+                                   <div class="widget-box bg-white m-b-30">
+                                        <div class="row d-flex align-items-center">
+                                            <div class="col-4">
+                                                <div class="text-center"><i class="ti ti-eye"></i></div>
+                                            </div>
+                                            <div class="col-4">
+                                                <div class="dynamicbar">Loading..</div>
+                                            </div>
+                                            <div class="col-4">
+                                                <h2 class="m-0 counter">145</h2>
+                                                <p>Visits Today</p> 
+                                            </div>
+                                        </div>
+                                   </div> 
+                                </div>
+                                <div class="col-lg-3 col-sm-3">
+                                   <div class="widget-box bg-white m-b-30">
+                                        <div class="row d-flex align-items-center text-center">
+                                            <div class="col-4">
+                                                <div class="text-center"><i class="ti ti-user"></i></div>
+                                            </div>
+                                            <div class="col-4">
+                                                <div class="inlinesparkline">Loading..</div>
+                                            </div>
+                                            <div class="col-4">
+                                                <h2 class="m-0 counter">946</h2>
+                                                <p>Patients Today</p> 
+                                            </div>
+                                        </div>
+                                   </div> 
+                                </div>
+                                <div class="col-lg-3 col-sm-3">
+                                    <div class="widget-box bg-white m-b-30">
+                                        <div class="row d-flex align-items-center">
+                                            <div class="col-4">
+                                                <div class="text-center"><i class="ti ti-money"></i></div>
+                                            </div>
+                                            <div class="col-4">
+                                                <div class="dynamicbar">Loading..</div>
+                                            </div>
+                                            <div class="col-4">
+                                                <h2 class="m-0 counter">548</h2>
+                                                <p>Visits Today</p> 
+                                            </div>
+                                        </div>
+                                   </div> 
+                                </div>
+                                <div class="col-lg-3 col-sm-3">
+                                    <div class="widget-box bg-white m-b-30">
+                                        <div class="row d-flex align-items-center">
+                                            <div class="col-4">
+                                                <div class="text-center"><i class="ti ti-wallet"></i></div>
+                                            </div>
+                                            <div class="col-4">
+                                                <div class="inlinesparkline">Loading..</div>
+                                            </div>
+                                            <div class="col-4">
+                                                <h2 class="m-0 counter">999</h2>
+                                                <p>Visits Today</p> 
+                                            </div>
+                                        </div>
+                                   </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--end row-->
+
+
+  <div class="card mt-4">
+    <div class="card-header">Today's Appointments</div>
+    <div class="card-body">
+      <ul>
+        <li>10:00 AM - John Doe (Chest Pain)</li>
+        <li>11:30 AM - Jane Smith (Regular Check-up)</li>
+        <li>01:00 PM - Rakesh Kumar (Follow-up)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card mt-4">
+    <div class="card-header">Pending Reports</div>
+    <div class="card-body">
+      <ul>
+        <li>ECG Report - John Doe</li>
+        <li>Blood Test - Jane Smith</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+                        
+                    
+                </div><!--end container-->
+
+  {% endblock %}
